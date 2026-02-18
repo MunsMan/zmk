@@ -20,20 +20,20 @@
     behaviors {
         ht_tp: hold_tap_tap_preferred {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT_TP";
             #binding-cells = <2>;
             tapping-term-ms = <500>; // Default ZMK value
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            display-name = "CTRL-ESC";
         };
 
         mod_tp: mod_tap_tap_preferred {
-            compatible = "zmk,behavior-mod-tap"; // Use mod-tap compatible
-            label = "MOD_TP";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <500>; // Default ZMK value
+            tapping-term-ms = <500>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&mo>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Space-NAV";
         };
     };
         keymap {
