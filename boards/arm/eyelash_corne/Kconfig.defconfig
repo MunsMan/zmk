@@ -3,20 +3,11 @@
 # SPDX-License-Identifier: MIT
 #
 
-if BOARD_EYELASH_CORNE_LEFT
-
-config ZMK_KEYBOARD_NAME
-    default "Eyelash Corne"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif # BOARD_EYELASH_CORNE_LEFT
-
 if BOARD_EYELASH_CORNE_LEFT || BOARD_EYELASH_CORNE_RIGHT
 
 config BOARD
-    default "eyelash_corne"
+    default "eyelash_corne_left" if BOARD_EYELASH_CORNE_LEFT
+    default "eyelash_corne_right" if BOARD_EYELASH_CORNE_RIGHT
 
 config BOARD_ENABLE_DCDC
     bool "Enable DCDC mode"

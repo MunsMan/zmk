@@ -1,8 +1,9 @@
-identifier: eyelash_corne
-name: Eyelash Corne
+identifier: eyelash_corne_right
+name: Eyelash Corne Right
 url: https://github.com/a741725193/zmk-new_corne
 type: mcu
 arch: arm
+soc: nRF52840_QIAA
 toolchain:
   - zephyr
   - gnuarmemb
